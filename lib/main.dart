@@ -26,9 +26,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         backgroundColor: Colors.teal,
-        body:
-
-        SafeArea(
+        body: SafeArea(
             child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -39,9 +37,48 @@ class MyApp extends StatelessWidget {
                 color: Colors.teal.shade100,
               ),
             ),
-            Card(
+            SizedBox(
+              width: 500,
+              child: Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
+                child: Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text(
+                          'Facebook',
+                          style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 20.0,
+                          ),
+                        ),
+                        const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 2.0)),
+                        Text(
+                          'User Name',
+                          style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 15.0,
+                          ),
+                        ),
+                        const Padding(
+                            padding: EdgeInsets.symmetric(vertical: 1.0)),
+                        Text(
+                          'Password',
+                          style: TextStyle(
+                            color: Colors.teal.shade900,
+                            fontFamily: 'Source Sans Pro',
+                            fontSize: 15.0,
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+
+              /*child: ListTile(
                   title: Text(
                     'facebook',
                     style: TextStyle(
@@ -54,7 +91,8 @@ class MyApp extends StatelessWidget {
                       'username:'
                           'pass:'
                     ),
-                )),
+                )),*/
+            ),
           ],
         )),
       ),
