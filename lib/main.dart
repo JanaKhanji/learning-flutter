@@ -30,19 +30,19 @@ class MyApp extends StatelessWidget {
             child: Column(
           //mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(
+            /*SizedBox(
               height: 20.0,
               width: 150.0,
               child: Divider(
                 color: Colors.teal.shade100,
               ),
-            ),
+            ),*/
             SizedBox(
               width: 500,
               child: Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                 child: Padding(
-                  padding: EdgeInsets.all(5),
+                  padding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 5.0),
                   child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
