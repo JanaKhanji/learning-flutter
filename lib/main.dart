@@ -10,11 +10,9 @@ class CustomListItem extends StatelessWidget {
     this.UserName,
     this.Pass,
   });
-
   final String Name;
   final String UserName;
   final String Pass;
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -58,22 +56,20 @@ class CustomListItem extends StatelessWidget {
     );
   }
 }
+
 class Data{
   // field
   String Name;
   String UserName;
   String Pass;
+  Data(this.Name, this.UserName, this.Pass);
 }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var data = new List<Data>();
-    var test = {Name= "facebook",
-      UserName="test",
-      Pass=test};
-     data.add(),
+    List<Data> datas = [Data('Facebook','test','test'),Data('instagram','test','test'), ];
 
-    ];
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
@@ -97,10 +93,11 @@ class MyApp extends StatelessWidget {
           child: Column(
             //mainAxisAlignment: MainAxisAlignment.center,
             children: <CustomListItem>[
+              for(var item in datas)
               CustomListItem(
-                Name: 'Facebook',
-                UserName: 'test',
-                Pass: 'test',
+                Name: item.Name,
+                UserName: item.UserName,
+                Pass: item.Pass,
               ),
             ],
           ),
