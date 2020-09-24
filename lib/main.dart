@@ -56,7 +56,6 @@ class CustomListItem extends StatelessWidget {
     );
   }
 }
-
 class Data{
   // field
   String Name;
